@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -9,9 +8,5 @@ import { ActivatedRoute } from '@angular/router';
     styleUrl: './header.css',
 })
 export class Header {
-    private activatedRoute = inject(ActivatedRoute);
 
-    constructor() {
-        console.log(this.activatedRoute);
-    }
 }

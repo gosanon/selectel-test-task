@@ -1,0 +1,5 @@
+.link-active::before {
+    content: ">";
+    position: absolute;
+    margin-left: -12px !important;
+}
