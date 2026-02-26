@@ -1,5 +1,5 @@
 import { Component, inject, input, model } from '@angular/core';
-import { Items } from '../../services/items.js';
+import { ItemsService } from '../../services/items.service.js';
 
 @Component({
   selector: 'main-item',
@@ -11,7 +11,7 @@ export class Item {
     id = input.required<number>();
     value = input.required<number>();
 
-    itemsService = inject(Items);
+    itemsService = inject(ItemsService);
 
     updateChecked(id: number) {
         this.itemsService.updateChecked(id);

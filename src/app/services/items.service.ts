@@ -3,7 +3,7 @@ import { computed, Injectable, signal } from '@angular/core';
 @Injectable({
     providedIn: 'root',
 })
-export class Items {
+export class ItemsService {
     items = signal([
         { id: 1, value: 20, checked: false },
         { id: 2, value: 30, checked: false },
@@ -21,20 +21,13 @@ export class Items {
             result + (checked ? 1 : 0), 0))
 
 
-    xsum() {
-        return this.items().reduce(
-        (result, { value, checked }) =>
-            result + (checked ? value : 0), 0);
-    }
-
-
     updateChecked(id: number) {
-        this.items.update(items => {
-            const item = items.find((item => item.id === id));
-            if (item)
-                item.checked = !item.checked;
-
-            return [...items];
-        });
+        this.items.set(
+            this.items().map(
+                ({ checked, ...item }) => ({
+                        checked: item.id === id
+                            ? !checked
+                            : checked,
+                        ...item })));
     }
 }

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Items } from '../services/items.js';
+import { ItemsService } from '../services/items.service.js';
 
 
 @Component({
@@ -9,5 +9,5 @@ import { Items } from '../services/items.js';
     styleUrl: './header.css',
 })
 export class Header {
-    itemsService = inject(Items);
+    itemsService = inject(ItemsService);
 }

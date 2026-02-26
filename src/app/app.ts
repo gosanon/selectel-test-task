@@ -2,7 +2,7 @@ import { Component, inject, input, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header.js';
 import { SideMenu } from './side-menu/side-menu.js';
-import { Items } from './services/items.js';
+import { ItemsService } from './services/items.service.js';
 
 @Component({
     selector: 'app-root',
