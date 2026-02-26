@@ -9,12 +9,5 @@ import { Items } from '../services/items.js';
     styleUrl: './header.css',
 })
 export class Header {
-    itemsService;
-
-    constructor() {
-        this.itemsService = inject(Items);
-
-        setInterval(() => console.log(JSON.stringify(this.itemsService.xsum(), null, 4)), 700);
-        setInterval(() => console.log(JSON.stringify(this.itemsService.sum(), null, 4)), 700);
-    }
+    itemsService = inject(Items);
 }

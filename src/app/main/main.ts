@@ -9,11 +9,5 @@ import { Items } from '../services/items.js';
   styleUrl: './main.css',
 })
 export class Main {
-    items = signal<{ id: number, value: number, checked: boolean }[]>([]);
-    itemsService;
-
-    constructor() {
-        this.itemsService = inject(Items);
-        this.items.set(this.itemsService.items());
-    }
+    itemsService = inject(Items);
 }

@@ -8,17 +8,12 @@ import { Items } from '../../services/items.js';
   styleUrl: './item.css',
 })
 export class Item {
-    id = input<number>(0);
-    value = input<number>(0);
+    id = input.required<number>();
+    value = input.required<number>();
 
-    itemsService;
-
-    constructor() {
-        this.itemsService = inject(Items);
-    }
+    itemsService = inject(Items);
 
     updateChecked(id: number) {
         this.itemsService.updateChecked(id);
-        console.log(this.itemsService.sum());
     }
 }
