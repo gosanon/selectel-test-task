@@ -1,5 +1,5 @@
 <header class="flex justify-between p-4 pb-6">
-    <span>Раздел: <...></span>
+    <span>Раздел: {{ pageName() }}</span>
     <span class="flex gap-10">
         <span>Выбрано пунктов: {{ itemsService.checkedCount() }}</span>
         <span>Общее значение: {{ itemsService.sum() }}</span>

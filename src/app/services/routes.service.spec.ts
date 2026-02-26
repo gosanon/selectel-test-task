@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SideMenuService } from './side-menu.service';
+import { RoutesService } from './routes.service';
 
-describe('SideMenu', () => {
-  let service: SideMenuService;
+describe('RoutesService', () => {
+  let service: RoutesService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SideMenuService);
+    service = TestBed.inject(RoutesService);
   });
 
   it('should be created', () => {
