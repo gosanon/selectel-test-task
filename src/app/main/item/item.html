@@ -1,7 +1,7 @@
 <label class="flex flex-row gap-4 p-2">
-    <input type="checkbox">
+    <input type="checkbox" (input)="updateChecked(id())">
     <div>
-        <p>Item <...id></p>
-        <p class="text-gray-600 text-xs">Value: <...value></p>
+        <p>Item {{ id() }}</p>
+        <p class="text-gray-600 text-xs">Value: {{ value() }}</p>
     </div>
 </label>
